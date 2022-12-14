@@ -1,9 +1,12 @@
 import React from 'react'
+import Footer from '../Components/Footer'
+import NavbarHeader from '../Components/Navbar'
 import "./UserRegister.css"
 
 const UserRegister = () => {
   return (
     <div>
+      <NavbarHeader/>
         <div>
        <div className="signup2box">
       <div className="heading">
@@ -43,6 +46,7 @@ const UserRegister = () => {
         </div>
     </div>
     </div>
+    <Footer/>
     </div>
   )
 }
