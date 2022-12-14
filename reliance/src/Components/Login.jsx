@@ -1,13 +1,13 @@
 import React from 'react'
+import Footer from './Footer'
 import "./Login.css"
+import NavbarHeader from './Navbar'
 
 const Login = () => {
   return (
     <>
-   
-
-<div class="mobileregister">
-       
+    <NavbarHeader/>
+    <div class="mobileregister">
        <div className="parent1">
              <div className="p">
                  <h4>Login / Register</h4>   
@@ -20,8 +20,8 @@ const Login = () => {
                </form>
             </div>
       </div>
- </div> 
-      
+    </div> 
+      <Footer/>
     </>
   )
 }
