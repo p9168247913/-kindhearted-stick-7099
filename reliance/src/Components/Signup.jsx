@@ -1,17 +1,6 @@
 import React, { useState } from 'react';
-import {
-    Box,
-    Button,
-    Heading,
-    Flex,
-    FormControl,
-    FormLabel,
-    Input,
-    Stack,
-    Text,
-    useColorModeValue
-} from '@chakra-ui/react';
-import { Link } from "react-router-dom"
+import {Box,Button,Heading,Flex,FormControl,FormLabel,Input,Stack,Text,useColorModeValue } from '@chakra-ui/react';
+import { Link } from "react-router-dom";
 import { useToast } from '@chakra-ui/react';
 
 export default function Signup() {

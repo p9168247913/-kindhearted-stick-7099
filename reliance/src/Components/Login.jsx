@@ -1,26 +1,6 @@
-import {
-    Flex,
-    Box,
-    FormControl,
-    FormLabel,
-    Input,
-    Checkbox,
-    Stack,
-    Button,
-    Heading,
-    Text,
-    useColorModeValue,
-} from '@chakra-ui/react';
-// import { useNavigate } from "react-dom"
-// import { useNavigate } from 'react-router';
+import {Flex,Box,FormControl,FormLabel,Input,Checkbox,Stack,Button,Heading,Text,useColorModeValue} from '@chakra-ui/react';
 import { Link } from "react-router-dom"
-
-
 export default function Login() {
-
-    // const navigate = useNavigate()
-
-
     return (
         <Flex
             minH={'100vh'}
