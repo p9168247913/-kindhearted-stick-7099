@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     font-family: Roboto,"system-ui",sans-serif;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 .nav-main{
     width: 90%;
@@ -60,7 +60,7 @@
     padding: 10px;
     color: white;
 }
-
+/* .dropdown-menu { position:relative !important } */
 .drop-menu-text > .nav-link{
     font-size: 13px;
     transform: 0.4s;
