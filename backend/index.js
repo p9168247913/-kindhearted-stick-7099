@@ -8,14 +8,11 @@ const UserModel = require('./schema/user.model')
 const watchModel = require('./schema/watch.model')
 const televisionModel = require("./schema/television.model")
 
-
 const app = express()
 
 app.use(express.urlencoded({ extended: true }))
 
 app.use(express.json())
-
-
 
 app.get("/soundbar", async (req, res) => {
     try {
@@ -37,6 +34,7 @@ app.get("/watch", async (req, res) => {
         res.status(401).send("Invalid api")
     }
 })
+
 app.get("/appliance", async (req, res) => {
     try {
         let laptop = await applianceModel.find({})
@@ -46,6 +44,7 @@ app.get("/appliance", async (req, res) => {
         res.status(401).send("Invalid api")
     }
 })
+
 app.get("/television", async (req, res) => {
     try {
         let television = await televisionModel.find({})
@@ -55,6 +54,7 @@ app.get("/television", async (req, res) => {
         res.status(401).send("Invalid api")
     }
 })
+
 app.get("/laptop", async (req, res) => {
     try {
         let laptop = await laptopModel.find({})
@@ -76,6 +76,7 @@ app.post("/signup", (req, res) => {
         res.status(401).send("Invalid creditional")
     }
 })
+
 app.post("/login", (req, res) => {
     
     try {
@@ -88,6 +89,8 @@ app.post("/login", (req, res) => {
         console.log("error")
     }
 })
+
+
 mongoose.connect(process.env.db_url).then(() => {
     app.listen(8080, () => { console.log('server statrted on port 8080') })
 })
