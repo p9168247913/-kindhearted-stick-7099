@@ -1,4 +1,5 @@
 const { Schema, model } = require("mongoose");
+
 const soundbarschema = new Schema({
   id:Number,
   imglink: String,

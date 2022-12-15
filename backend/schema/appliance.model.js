@@ -1,4 +1,5 @@
 const { Schema, model } = require("mongoose");
+
 const applianceschema = new Schema({
   id:Number,
   imglink: String,
