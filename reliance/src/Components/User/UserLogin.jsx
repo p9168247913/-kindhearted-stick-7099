@@ -1,9 +1,9 @@
 import React from 'react'
-import Footer from './Footer'
-import "./Login.css"
-import NavbarHeader from './Navbar'
+import Footer from '../Footer'
+import "./UserLogin.css"
+import NavbarHeader from '../Navbar'
 
-const Login = () => {
+const UserLogin = () => {
   return (
     <>
     <NavbarHeader/>
@@ -26,4 +26,4 @@ const Login = () => {
   )
 }
 
-export default Login
+export default UserLogin
