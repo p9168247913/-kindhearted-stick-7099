@@ -1,6 +1,6 @@
 import React from 'react'
-import Footer from '../Components/Footer'
-import NavbarHeader from '../Components/Navbar'
+import Footer from '../../Components/Footer'
+import NavbarHeader from '../../Components/Navbar'
 import "./UserRegister.css"
 
 const UserRegister = () => {
