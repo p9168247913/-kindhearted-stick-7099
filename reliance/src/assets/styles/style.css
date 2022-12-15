@@ -202,6 +202,61 @@
     width: 100%;
 }
 
+.card-width {
+    width: 90%;
+    margin: auto;
+    box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+    border-radius: 5px;
+    padding: 4% 4% 4% 4%;
+    /* border: 1px solid black; */
+}
+.prod-slider{
+    margin: 0% auto;
+}
+.react-multi-carousel-list {
+    width: 100%;
+    padding: 2% 0;
+    /* margin: 2% auto; */
+}
+.product-name{
+    color: #003380;
+    font-size: 15px;
+    height: 2.6em;
+    line-height: 1.4em;
+    margin-right: 20px;
+    overflow: hidden;
+    margin-bottom: 4%;
+}
+
+.react-multiple-carousel__arrow {
+    /* border-radius: 35px; */
+    z-index: 1000;
+    border: 0;
+    background: rgba(255, 255, 255, 0.5);
+    min-height: 100px;
+    color: black;
+    cursor: pointer;
+}
+
+.sec-title1{
+    color: #333;
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: .7em;
+    margin-bottom: 20px;
+    padding: 0 10px 2px 0;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+.prods1{
+    text-align: left;
+    width: 90%;
+    margin: auto;
+    margin: 3% auto;
+}
+
 @media (min-width: 992px) {
     .navbar-expand-lg .offcanvas {
         flex-grow: 0;

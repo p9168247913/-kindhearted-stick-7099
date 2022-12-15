@@ -1,3 +1,4 @@
+import axios from 'axios';
 import * as types from './actionTypes'
 
 
@@ -20,4 +21,15 @@ const ProdReq = () => {
     };
   };
 
-  export {ProdError,ProdReq,ProdSuc}
+  const FetchTelevision =(dispatch)=>{
+      dispatch(ProdReq());
+      return axios
+      .get('https://reliance-3bcw.onrender.com/television').then((res)=>{ 
+          // console.log(res.data)
+          dispatch(ProdSuc(res.data))
+      }).catch(e=>{
+          dispatch(ProdError())
+          return e
+      })
+  }
+  export {ProdError,ProdReq,ProdSuc, FetchTelevision}
