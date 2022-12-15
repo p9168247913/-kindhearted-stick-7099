@@ -1,9 +1,9 @@
 import React from 'react'
 import {Routes, Route} from 'react-router-dom'
 import Home from '../Components/Home'
-import Login from '../Components/Login'
+import Login from '../Components/User/UserLogin'
 import Signup from '../Components/Signup'
-import UserRegister from '../Pages/UserRegister'
+import UserRegister from '../Pages/UserSignup/UserRegister'
 
 const AllRoutes = () => {
   return (
