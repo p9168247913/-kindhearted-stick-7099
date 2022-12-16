@@ -2,18 +2,18 @@ import React, { useEffect } from 'react'
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { useDispatch, useSelector } from 'react-redux';
-import { FetchTelevision } from '../Redux/AppReducer/action';
+import { FetchSoundBar } from '../Redux/AppReducer/action';
 import Image from 'react-bootstrap/Image'
 
-const ProductCarousel = (props) => {
+const SoundBarCarousel = (props) => {
     const dispatch = useDispatch();
-    const televisons = useSelector((store)=>store.prod_name);
+    const Sound = useSelector((store)=>store.soundbar);
 
     useEffect(()=>{
-        dispatch(FetchTelevision)
+        dispatch(FetchSoundBar);
     },[dispatch]);
 
-    // console.log(televisons);
+    // console.log(Watches);
 
     const responsive = {
         desktop: {
@@ -32,7 +32,7 @@ const ProductCarousel = (props) => {
   return (
 
     <div className='prods1'>
-        <h1 className='sec-title1'>PRICE DROP ON TELEVISIONS</h1>
+        <h1 className='sec-title1'>PRICE DROP ON SOUNDBARS</h1>
         <Carousel
             className='prod-slider'
             swipeable={false}
@@ -53,7 +53,7 @@ const ProductCarousel = (props) => {
             dotListClass="custom-dot-list-style"
             itemClass="carousel-item-padding-40-px"
         >
-            {televisons.map((e)=>{
+            {Sound.map((e)=>{
                 return <div key={e.id} className='card-width'>
                     <Image src={e.img1} width='100%'/>
                     <p className='product-name'>{e.name}</p>
@@ -65,10 +65,8 @@ const ProductCarousel = (props) => {
                 </div>
             })}
         </Carousel>
-
-        
     </div>
   )
 }
 
-export default ProductCarousel;
+export default SoundBarCarousel;
