@@ -11,7 +11,7 @@ const ProductCarousel = () => {
 
     useEffect(()=>{
         dispatch(FetchTelevision)
-    },[]);
+    },[dispatch]);
 
     console.log(televisons);
 

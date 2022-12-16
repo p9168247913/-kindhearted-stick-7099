@@ -1,5 +1,6 @@
 import React from 'react'
 import {Routes, Route} from 'react-router-dom'
+import AdminDashboard from '../Components/Admin/AdminDashboard'
 import AdminLogin from '../Components/Admin/AdminLogin'
 import Home from '../Components/Home'
 import Login from '../Components/User/UserLogin'
@@ -10,11 +11,12 @@ const AllRoutes = () => {
   return (
     <div>
         <Routes>
-            <Route path='/' element={<Home/>}></Route>
-            <Route path='/login' element={<Login/>}></Route>
-            <Route path='/signup' element={<Signup/>}></Route>
-            <Route path='/register' element={<UserRegister/>}></Route>
-            <Route path="/adminlogin" element={<AdminLogin/>}></Route>
+            <Route path='/' element={<Home/>}/>
+            <Route path='/login' element={<Login/>}/>
+            {/* <Route path='/signup' element={<Signup/>}/> */}
+            <Route path='/register' element={<UserRegister/>}/>
+            <Route path="/admin-Login" element={<AdminLogin/>}/>
+            <Route path="/admin-Dashboard" element={<AdminDashboard/>}/>
         </Routes>
     </div>
   )
