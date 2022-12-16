@@ -11,12 +11,19 @@ import {
     Text,
     useColorModeValue,
 } from '@chakra-ui/react';
+import { useState } from 'react';
 
 import { Link } from "react-router-dom"
 
 
-export default function Login() {
-
+export default function AdminLogin() {
+    const [text, setText] = useState({
+        email : "",
+        password:""
+    })
+    const handelSubmit = ()=>{
+        console.log(text);
+    }
 
     return (
         <Flex
@@ -39,11 +46,11 @@ export default function Login() {
                     <Stack spacing={4}>
                         <FormControl id="email">
                             <FormLabel>Email address</FormLabel>
-                            <Input type="email" />
+                            <Input type="email" value={text} onChange={e=>setText(e.target.value)}/>
                         </FormControl>
                         <FormControl id="password">
                             <FormLabel>Password</FormLabel>
-                            <Input type="password" />
+                            <Input type="password" value={text} onChange={e=>setText(e.target.value)}/>
                         </FormControl>
                         <Stack spacing={10}>
                             <Stack
@@ -58,7 +65,7 @@ export default function Login() {
                                 color={'white'}
                                 _hover={{
                                     bg: 'blue.500',
-                                }}>
+                                }} onClick = {handelSubmit}>
                                 Sign in
                             </Button>
                         </Stack>

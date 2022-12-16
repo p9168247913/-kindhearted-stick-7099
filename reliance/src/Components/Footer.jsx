@@ -4,7 +4,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import {AiFillFacebook} from 'react-icons/ai';
 import {BsTwitter} from 'react-icons/bs';
-import {TfiYoutube} from 'react-icons/tfi';
+import {TfiYoutube} from 'react-icons/t fi';
 import Playstore from '../assets/google_play_store.jpg';
 import Ios from '../assets/ios_app_store_icon.jpg';
 import Image from 'react-bootstrap/Image'
