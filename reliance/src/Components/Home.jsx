@@ -6,6 +6,8 @@ import Slider from './Slider'
 import WatchCarousel from './WatchCarousel'
 import AppliancesCarousel from './AppliancesCarousel'
 import ExploreCarousel from './ExploreCarousel'
+import Banners from './Banners'
+import SoundBarCarousel from './SouundBarCarousel'
 const Home = () => {
   return (
     <div>
@@ -13,8 +15,10 @@ const Home = () => {
         <Slider/>
         <ProductCarousel/>
         <WatchCarousel/>
+        <Banners/>
         <AppliancesCarousel/>
         <ExploreCarousel/>
+        <SoundBarCarousel/>
         <Footer/>
     </div>
   )

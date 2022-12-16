@@ -64,6 +64,27 @@ const ProdReq = () => {
     };
   };
 
+  // Actions for Appliances
+
+  const SoundbarReq = () => {
+    return {
+      type: types.Get_Soundbar_Req,
+    };
+  };
+
+  const SoundbarSuc = (payload) => {
+    return {
+      type: types.Get_Soundbar_Suc,
+      payload,
+    };
+  };
+
+  const SoundbarError = () => {
+    return {
+      type: types.Get_Soundbar_Fail,
+    };
+  };
+
   const FetchTelevision =(dispatch)=>{
       dispatch(ProdReq());
       return axios
@@ -96,10 +117,21 @@ const ProdReq = () => {
     })
   }
   
+  const FetchSoundBar = (dispatch)=>{
+    dispatch(SoundbarReq());
+    return axios.get(`https://reliance-3bcw.onrender.com/soundbar`).then(res=>{
+        dispatch(SoundbarSuc(res.data))
+    }).catch(e=>{
+        dispatch(SoundbarError)
+        return e
+    })
+  }
+
   export { 
     FetchWatch, 
     FetchAppliance, 
-    FetchTelevision, 
+    FetchTelevision,
+    FetchSoundBar, 
     ProdError, 
     ProdReq, 
     ProdSuc, 
@@ -108,5 +140,8 @@ const ProdReq = () => {
     WatchReq, 
     ApplianceError, 
     ApplianceSuc, 
-    ApplianceReq
+    ApplianceReq,
+    SoundbarError, 
+    SoundbarSuc, 
+    SoundbarReq
   }
