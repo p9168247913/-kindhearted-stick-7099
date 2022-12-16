@@ -80,13 +80,13 @@ app.post("/signup", (req, res) => {
 app.post("/login", (req, res) => {
     
     try {
-        const { email, password, phonenumber } = req.body
-        let user = UserModel.findOne({ email, password, phonenumber });
+        const { email, password } = req.body
+        let user = UserModel.findOne({ email, password });
 
         res.status(200).send(user)
     }
     catch (e) {
-        console.log("error")
+        res.status(401).send("user not genertated");
     }
 })
 

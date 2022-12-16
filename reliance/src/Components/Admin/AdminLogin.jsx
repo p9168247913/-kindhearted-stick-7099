@@ -13,7 +13,9 @@ import {
 } from '@chakra-ui/react';
 import { useState } from 'react';
 
-import { Link } from "react-router-dom"
+import { Link  } from "react-router-dom"
+import {useNavigate} from "react-router-dom"
+
 
 
 export default function AdminLogin() {
@@ -21,8 +23,21 @@ export default function AdminLogin() {
         email : "",
         password:""
     })
+    const handelChangeInput  =(e)=>{
+        setText({...text,[e.target.type]:e.target.value})
+    }
+    const navigate = useNavigate()
     const handelSubmit = ()=>{
-        console.log(text);
+        if(text.email === "reliance@gmail.com" && text.password === "ambani"){
+            //send dashboard
+            navigate("/admin-Dashboard")
+        }else if(text.email === "reliance@gmail.com" && text.password !== "ambani"){
+            //password wrong
+        }else if(text.email !== "reliance@gmail.com" && text.password === "ambani"){
+            //email wrong
+        }else{
+            //all this are wrong
+        }
     }
 
     return (
@@ -33,7 +48,7 @@ export default function AdminLogin() {
             bg={useColorModeValue('gray.50', 'gray.800')}>
             <Stack spacing={8} mx={'auto'} maxW={'lg'} py={12} px={6}>
                 <Stack align={'center'}>
-                    <Heading fontSize={'4xl'}>Sign in to your account</Heading>
+                    <Heading fontSize={'4xl'}>Sign in to Admin Account</Heading>
                     <Text fontSize={'lg'} color={'gray.600'}>
                         Create New Account <Link to="/signup" style={{ textDecoration: 'none', color: 'blue' }} >Signup</Link>
                     </Text>
@@ -46,11 +61,11 @@ export default function AdminLogin() {
                     <Stack spacing={4}>
                         <FormControl id="email">
                             <FormLabel>Email address</FormLabel>
-                            <Input type="email" value={text} onChange={e=>setText(e.target.value)}/>
+                            <Input type="email" value={text.email} onChange={handelChangeInput}/>
                         </FormControl>
                         <FormControl id="password">
                             <FormLabel>Password</FormLabel>
-                            <Input type="password" value={text} onChange={e=>setText(e.target.value)}/>
+                            <Input type="password" value={text.password} onChange={handelChangeInput}/>
                         </FormControl>
                         <Stack spacing={10}>
                             <Stack

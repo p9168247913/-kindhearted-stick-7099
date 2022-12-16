@@ -15,7 +15,7 @@ const UserSchema = new Schema({
     default: "user",
   },
   password: String,
-  phonenumbr:{
+  phonenumber:{
     type:Number,
     require:true,
     unique:true,
