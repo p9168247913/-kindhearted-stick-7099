@@ -21,12 +21,13 @@ const ProdReq = () => {
     };
   };
 
-  const FetchTelevision =(dispatch)=>{
+  const FetchTelevision =(queryParams)=>(dispatch)=>{
       dispatch(ProdReq());
       return axios
-      .get('https://reliance-3bcw.onrender.com/television').then((res)=>{ 
+      .get('https://reliance-3bcw.onrender.com/television',queryParams).then((res)=>{ 
           // console.log(res.data)
           dispatch(ProdSuc(res.data))
+          console.log(res)
       }).catch(e=>{
           dispatch(ProdError())
           return e
