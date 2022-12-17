@@ -5,6 +5,7 @@ const initState = {
     allwatch:[],
     appliances:[],
     soundbar:[],
+    laptop:[],
     isLoading:false,
     isError:false
 }
@@ -36,6 +37,12 @@ const reducer = (oldstate = initState, action) => {
             return {...oldstate, isLoading:false, soundbar:payload}
         case types.Get_Soundbar_Fail:
             return {...oldstate, isError:true, isLoading:false}
+        case types.Get_Laptop_Req:
+            return {...oldstate, isLoading:true}
+        case types.Get_Laptop_Suc:
+            return {...oldstate, isLoading:false, laptop:payload}
+        case types.Get_Laptop_Fail:
+            return {...oldstate, isError:true, isLoading:false}    
         default:
             return initState
     }

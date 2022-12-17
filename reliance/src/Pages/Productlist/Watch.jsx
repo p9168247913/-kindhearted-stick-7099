@@ -1,12 +1,15 @@
 import { Box, Container } from '@chakra-ui/react'
 import React from 'react'
-import Filter from '../../Components/Products/Filter'
-import ProductCard from '../../Components/Products/ProductCard'
+import Footer from '../../Components/Footer'
+import NavbarHeader from '../../Components/Navbar'
+import Filter from '../../Components/Products/Watch/Filter'
+import ProductCard from '../../Components/Products/Watch/ProductCard'
 
-const ProductList = () => {
+
+const Watch = () => {
   return (
     <>
-  
+    <NavbarHeader/>
      <Container
      mt="20px"
     minW={"95%"}
@@ -20,8 +23,9 @@ const ProductList = () => {
         <ProductCard />
       </Container>
     
+    <Footer/>
     </>
   )
 }
 
-export default ProductList
+export default Watch
