@@ -1,4 +1,4 @@
-import React from 'react'
+
 import {Routes, Route} from 'react-router-dom'
 import Dashboard from '../Components/Admin/Admin/Dashboard'
 // import AdminDashboard from '../Components/Admin/AdminDashboard'
@@ -11,14 +11,11 @@ import Admin from  "../Pages/Admin/Admin"
 import UserRegister from '../Pages/UserSignup/UserRegister';
 import Products from '../Components/Admin/Admin/Products'
 
-// import Dashboard from "../Components/Admin/Admin/Dashboard";
-// import SidebarWithHeader from '../Pages/Admin/Admin'
-// import Dashboard from '../Components/Admin/Admin/Dashboard'
-
 
 const AllRoutes = () => {
   return (
     <div>
+
         <Routes>
             <Route path='/' element={<Home/>}/>
             <Route path='/login' element={<Login/>}/>
@@ -28,7 +25,6 @@ const AllRoutes = () => {
             <Route path="/admin-Dashboard" element={<Admin><Dashboard/></Admin>}></Route>
             <Route path="/admin-Products" element = {<Admin><Products/></Admin>}/>
           
-            
         </Routes>
     </div>
   )
