@@ -85,11 +85,32 @@ const ProdReq = () => {
     };
   };
 
-  const FetchTelevision =(dispatch)=>{
+ // Actions for Laptop
+
+  const LaptopReq = () => {
+    return {
+      type: types.Get_Laptop_Req,
+    };
+  };
+
+  const LaptopSuc = (payload) => {
+    return {
+      type: types.Get_Laptop_Suc,
+      payload,
+    };
+  };
+
+  const LaptopError = () => {
+    return {
+      type: types.Get_Laptop_Fail,
+    };
+  };
+
+  const FetchTelevision = (queryParams)=>(dispatch)=>{
       dispatch(ProdReq());
       return axios
-      .get('https://reliance-3bcw.onrender.com/television').then((res)=>{ 
-          // console.log(res.data)
+      .get('https://reliance-3bcw.onrender.com/television',queryParams).then((res)=>{ 
+          console.log(res.data)
           dispatch(ProdSuc(res.data))
       }).catch(e=>{
           dispatch(ProdError())
@@ -97,9 +118,9 @@ const ProdReq = () => {
       })
   }
 
-  const FetchWatch = (dispatch)=>{
+  const FetchWatch =(queryParams)=> (dispatch)=>{
       dispatch(WatchReq());
-      return axios.get(`https://reliance-3bcw.onrender.com/watch`).then(res=>{
+      return axios.get(`https://reliance-3bcw.onrender.com/watch`,queryParams).then(res=>{
           dispatch(WatchSuc(res.data))
       }).catch(e=>{
           dispatch(WatchError)
@@ -107,9 +128,9 @@ const ProdReq = () => {
       })
   }
 
-  const FetchAppliance = (dispatch)=>{
+  const FetchAppliance =(queryParams)=> (dispatch)=>{
     dispatch(ApplianceReq());
-    return axios.get(`https://reliance-3bcw.onrender.com/appliance`).then(res=>{
+    return axios.get(`https://reliance-3bcw.onrender.com/appliance`,queryParams).then(res=>{
         dispatch(ApplianceSuc(res.data))
     }).catch(e=>{
         dispatch(ApplianceError)
@@ -117,12 +138,24 @@ const ProdReq = () => {
     })
   }
   
-  const FetchSoundBar = (dispatch)=>{
+  const FetchSoundBar =(queryParams)=>(dispatch)=>{
     dispatch(SoundbarReq());
-    return axios.get(`https://reliance-3bcw.onrender.com/soundbar`).then(res=>{
+    return axios.get(`https://reliance-3bcw.onrender.com/soundbar`, queryParams).then(res=>{
         dispatch(SoundbarSuc(res.data))
+        console.log(res.data)
     }).catch(e=>{
         dispatch(SoundbarError)
+        return e
+    })
+  }
+
+  const FetchLaptop =(queryParams)=>(dispatch)=>{
+    dispatch(LaptopReq());
+    return axios.get(`https://reliance-3bcw.onrender.com/laptop`, queryParams).then(res=>{
+        dispatch(LaptopSuc(res.data))
+        console.log(res.data)
+    }).catch(e=>{
+        dispatch(LaptopError)
         return e
     })
   }
@@ -132,6 +165,7 @@ const ProdReq = () => {
     FetchAppliance, 
     FetchTelevision,
     FetchSoundBar, 
+    FetchLaptop,
     ProdError, 
     ProdReq, 
     ProdSuc, 
@@ -143,5 +177,6 @@ const ProdReq = () => {
     ApplianceReq,
     SoundbarError, 
     SoundbarSuc, 
-    SoundbarReq
+    SoundbarReq,
+    
   }
