@@ -1,6 +1,5 @@
 const { Schema, model } = require("mongoose");
-
-const televisionschema = new Schema({
+const laptopschema = new Schema({
   id:Number,
   imglink: String,
   name: String,
@@ -19,5 +18,7 @@ const televisionschema = new Schema({
   img3: String,
 });
 
-const televisionModel = model("television", televisionschema);
-module.exports = televisionModel;
+
+
+const laptopModel = model("laptop", laptopschema);
+module.exports = laptopModel;
