@@ -18,5 +18,7 @@ const laptopschema = new Schema({
   img3: String,
 });
 
+
+
 const laptopModel = model("laptop", laptopschema);
 module.exports = laptopModel;
