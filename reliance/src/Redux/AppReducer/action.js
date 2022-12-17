@@ -27,7 +27,6 @@ const ProdReq = () => {
       .get('https://reliance-3bcw.onrender.com/television',queryParams).then((res)=>{ 
           // console.log(res.data)
           dispatch(ProdSuc(res.data))
-          console.log(res)
       }).catch(e=>{
           dispatch(ProdError())
           return e
