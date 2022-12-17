@@ -17,7 +17,7 @@ import { Button } from 'react-bootstrap';
 
 const ExploreCarousel = (props) => {
     const dispatch = useDispatch();
-    const Appliance = useSelector((store)=>store.appliances);
+    const Appliance = useSelector((store)=>store.AppReducer.appliances);
 
     useEffect(()=>{
         dispatch(FetchAppliance);

@@ -18,8 +18,8 @@ const NavbarHeader = () => {
   const alertClicked = () => {
     alert('You clicked the it !!');
   };
-  const Watches = useSelector((store)=>store.allwatch);
-  console.log(Watches)
+  const Watches = useSelector((store)=>store.AppReducer.allwatch);
+  // console.log(Watches)
   const [text, setText]  = useState('');
 
   const onSearch = (searchItem)=>{

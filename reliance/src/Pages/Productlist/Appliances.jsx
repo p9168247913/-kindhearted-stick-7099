@@ -21,22 +21,23 @@ const Appliances = () => {
       borderBottom={"1px solid grey"} 
       alignItems={"center"}
       justifyItems="center"
-      pl="15px" >
-      <Box > <FaHome/> </Box>
-      <Box> <FaAngleRight/> </Box>
+      pl="30px" >
+      <Box mr="10px"> <FaHome/> </Box>
+      <Box mr="10px"> <FaAngleRight/> </Box>
       <Box>  <Text>Search</Text></Box>
 
       </Flex>
 
      
      <Container
+        
         mt="20px"
         minW={"100%"}
         height="auto"
         bg="#F9F9FA"
         // border="1px solid red"
       display={"flex"}
-      m="0"
+      m="auto"
       
      >
         <Filter />

@@ -12,7 +12,7 @@ import { FetchTelevision } from '../../../Redux/AppReducer/action';
 const ProductCard = () => {
     const dispatch = useDispatch()
     const [searchParams]=useSearchParams()
-    const prod_name= useSelector((store)=>store.prod_name)
+    const prod_name= useSelector((store)=>store.AppReducer.prod_name)
     const location = useLocation()
 
     useEffect(()=>{
@@ -57,7 +57,7 @@ if(prod_name.length>0){
       // border={"1px solid blue"}
       //  display="grid" 
       boxShadow='lg' p='5' rounded='md' bg='#FFFFFF'
-      width={"72rem"}
+      width={"70rem"}
      minHeight="2rem"
       position={"relative"}
       justifyContent="end"

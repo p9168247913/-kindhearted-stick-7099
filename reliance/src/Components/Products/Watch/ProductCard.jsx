@@ -12,7 +12,7 @@ import { FetchWatch } from '../../../Redux/AppReducer/action';
 const ProductCard = () => {
     const dispatch = useDispatch()
     const [searchParams]=useSearchParams()
-    const allwatch= useSelector((store)=>store.allwatch)
+    const allwatch= useSelector((store)=>store.AppReducer.allwatch)
     const location = useLocation()
 
     useEffect(()=>{
@@ -43,7 +43,7 @@ if(allwatch.length>0){
     
     <Box
       h={"auto"}
-      w="72rem"
+      w="70rem"
       m="auto"
      mt="0px"
       mr="0px"

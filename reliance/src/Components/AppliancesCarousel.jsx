@@ -7,7 +7,7 @@ import Image from 'react-bootstrap/Image'
 
 const AppliancesCarousel = (props) => {
     const dispatch = useDispatch();
-    const Appliance = useSelector((store)=>store.appliances);
+    const Appliance = useSelector((store)=>store.AppReducer.appliances);
 
     useEffect(()=>{
         dispatch(FetchAppliance);

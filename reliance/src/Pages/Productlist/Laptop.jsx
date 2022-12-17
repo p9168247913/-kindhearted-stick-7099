@@ -27,13 +27,14 @@ const Laptop = () => {
 
      
      <Container
+       
         mt="20px"
-        minW={"100%"}
+        minW={"98%"}
         height="auto"
         bg="#F9F9FA"
         // border="1px solid red"
-      display={"flex"}
-      m="0"
+        display={"flex"}
+        m="0"
       
      >
         <Filter />

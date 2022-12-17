@@ -12,7 +12,7 @@ import { FetchAppliance } from '../../../Redux/AppReducer/action';
 const ProductCard = () => {
     const dispatch = useDispatch()
     const [searchParams]=useSearchParams()
-    const appliances= useSelector((store)=>store.appliances)
+    const appliances= useSelector((store)=>store.AppReducer.appliances)
     const location = useLocation()
 
     useEffect(()=>{
@@ -54,10 +54,11 @@ if(appliances.length>0){
     
       <Box>
       <Flex 
-      // border={"1px solid blue"}
+    
+      border={"0px solid blue"}
       //  display="grid" 
       boxShadow='lg' p='5' rounded='md' bg='#FFFFFF'
-      width={"72rem"}
+      width={"70rem"}
      minHeight="2rem"
       position={"relative"}
       justifyContent="end"
