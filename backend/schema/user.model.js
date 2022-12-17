@@ -1,6 +1,4 @@
 const { Schema, model } = require("mongoose");
-
-
 const UserSchema = new Schema({
   name: String,
   email: {
@@ -8,14 +6,13 @@ const UserSchema = new Schema({
     require:true,
     unique: true,
   },
-  
   role: {
     type: String,
     enum: ["admin", "user"],
     default: "user",
   },
   password: String,
-  phonenumbr:{
+  phonenumber:{
     type:Number,
     require:true,
     unique:true,
