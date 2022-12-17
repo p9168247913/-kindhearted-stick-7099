@@ -1,4 +1,5 @@
 const { Schema, model } = require("mongoose");
+
 const laptopschema = new Schema({
   id:Number,
   imglink: String,

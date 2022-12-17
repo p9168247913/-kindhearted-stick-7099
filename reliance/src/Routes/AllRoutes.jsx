@@ -1,21 +1,31 @@
-import React from 'react'
-import { Routes, Route } from 'react-router-dom'
+
+import {Routes, Route} from 'react-router-dom'
+import Dashboard from '../Components/Admin/Admin/Dashboard'
+// import AdminDashboard from '../Components/Admin/AdminDashboard'
+import AdminLogin from '../Components/Admin/AdminLogin'
 import Home from '../Components/Home'
-// import Login from '../Components/Login'
-// import Signup from '../Components/Admin/Signup'
-import UserRegister from '../Pages/UserRegister'
-import Cart from "../Pages/CartAndPayment/Cart"
-import Payment from './../Pages/CartAndPayment/Payment';
+// import ProductCarousel from '../Components/ProductCarousel'
+import Login from '../Components/User/UserLogin'
+import Admin from  "../Pages/Admin/Admin"
+// import Signup from '../Components/Signup'
+import UserRegister from '../Pages/UserSignup/UserRegister';
+import Products from '../Components/Admin/Admin/Products'
+
 
 const AllRoutes = () => {
   return (
     <div>
-      <Routes>
-        <Route path='/' element={<Home />}></Route>
-        <Route path='/cart' element={<Cart />}></Route>
-        <Route path="/checkout" element={<Payment />}></Route>
-        <Route path='/register' element={<UserRegister />}></Route>
-      </Routes>
+
+        <Routes>
+            <Route path='/' element={<Home/>}/>
+            <Route path='/login' element={<Login/>}/>
+            {/* <Route path='/signup' element={<Signup/>}/> */}
+            <Route path='/register' element={<UserRegister/>}/>
+            <Route path="/admin-Login" element={<AdminLogin/>}></Route>
+            <Route path="/admin-Dashboard" element={<Admin><Dashboard/></Admin>}></Route>
+            <Route path="/admin-Products" element = {<Admin><Products/></Admin>}/>
+          
+        </Routes>
     </div>
   )
 }

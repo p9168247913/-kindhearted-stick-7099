@@ -202,6 +202,177 @@
     width: 100%;
 }
 
+.card-width {
+    width: 90%;
+    margin: auto;
+    box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+    border-radius: 5px;
+    padding: 4% 4% 4% 4%;
+    /* border: 1px solid black; */
+}
+.prod-slider{
+    margin: 0% auto;
+}
+.react-multi-carousel-list {
+    width: 100%;
+    padding: 2% 0;
+    /* margin: 2% auto; */
+}
+.product-name{
+    color: #003380;
+    font-size: 15px;
+    height: 2.6em;
+    line-height: 1.4em;
+    margin-right: 20px;
+    overflow: hidden;
+    margin-bottom: 4%;
+}
+
+.react-multiple-carousel__arrow {
+    /* border-radius: 35px; */
+    z-index: 1000;
+    border: 0;
+    background: rgba(255, 255, 255, 0.5);
+    min-height: 100px;
+    color: black;
+    cursor: pointer;
+}
+
+.sec-title1{
+    color: #333;
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: .7em;
+    margin-bottom: 20px;
+    padding: 0 10px 2px 0;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+.prods1{
+    text-align: left;
+    width: 90%;
+    margin: auto;
+    margin: 3% auto;
+}
+
+.react-multiple-carousel__arrow {
+    transition: all .5s;
+    border-radius: 5px !important;
+    z-index: 1000;
+    border: 0;
+    background: rgb(255, 255, 255) !important;
+    min-width: 2% !important;
+    min-height: 80px !important;
+    opacity: 1;
+    cursor: pointer;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+}
+*::before{
+    color: black !important;
+    
+}
+
+.explore-box{
+    text-align: center;
+    margin: auto;
+    width: 60%;
+}
+.explore-box >img{
+    text-align: center;
+    margin: auto;
+    width: 100%;
+    margin-bottom: 25%;
+}
+
+.explore-title{
+    color: #333;
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: .7em;
+    margin: auto;
+    margin-bottom: 2%;
+    padding: 0 10px 2px 0;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.explore-prods{
+    padding: 2% 0%;
+    width: 100%;
+    margin: auto;
+    margin: 2% auto;
+    background-color: #f7f7f7;
+}
+.view-all{
+    background-color: #003380;
+    color: white;
+    border-radius: 22px;
+    border: none;
+    padding: 10px 30px 10px 30px;
+    transition: 0.4s;
+    margin-top: 2%;
+}
+
+.view-all:hover{
+    background-color: white;
+    color: #003380;
+    transition: 0.4s;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+/* img{
+    margin-bottom: 5%;
+} */
+
+.res-box{
+    text-align: start;
+}
+.search-res{
+    background-color: white;
+    color: black;
+    display: flex;
+    flex-direction: column;
+}
+
+.banners-sec{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(2,auto);
+    gap: 3%;
+    width: 90%;
+    margin: auto;
+    margin-top: 2%;
+}
+
+.banners-sec>img{
+    margin: auto;
+    margin-bottom: 6%;
+    width: 100%;
+}
+
+.offer-label {
+    display: inline-block;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    color: rgb(49, 129, 46);
+    background: rgb(239, 252, 245);
+    border: 1px solid rgb(49, 129, 46);
+    border-radius: 16px;
+    font-size: 10px;
+    font-weight: 500;
+    padding: 1px 6px;
+    text-transform: uppercase;
+}
+.card-details{
+    color: #666;
+    font-size: 14px;
+    font-weight: 400 !important;
+}
+
 @media (min-width: 992px) {
     .navbar-expand-lg .offcanvas {
         flex-grow: 0;
@@ -267,6 +438,37 @@
     .hr-div{
         display: none;
     }
+    .sec-title1{
+        line-height: 1em;
+        font-size: 15px;
+    }
+    .explore-title{
+        margin-top: 8%;
+        margin-bottom: 5%;
+        line-height: 1em;
+        font-size: 15px;
+    }
+    .explore-box >img {
+        margin-bottom: 15%;
+    }
+    .explore-box{
+        width: 35%;
+    }
+    .prods1{
+        margin-bottom: 10%;
+    }
+    .card-width{
+        width: 75%;
+    }
+    .banners-sec{
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(4,auto);
+        width: 95%;
+        margin-bottom: 20%;
+    }
+    .banners-sec>img{
+        margin-bottom: 2%;
+    }
 }
 
 @media only screen and (min-width:481px) and (max-width:890px) {
@@ -315,4 +517,12 @@
     .hr-div{
         display: none;
     }
+    .prods1{
+        margin-bottom: 5%;
+    }
+    .banners-sec{
+        margin-top: 3%;
+        margin-bottom: 6%;
+    }
+
 }

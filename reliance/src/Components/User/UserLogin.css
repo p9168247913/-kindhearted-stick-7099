@@ -1,0 +1,120 @@
+.mobileregister{
+  display:flex;
+  width: 70%;
+  justify-content:end;
+  margin-left: 25%;
+  padding-bottom: 20px;
+ height: 20rem;
+  /* border:1px solid red */
+ }
+
+ 
+ .mobileregister .parent1{
+   width: 47%;
+   text-align: center;
+   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+   margin:2rem 0;
+   /* padding-top: 2rem; */
+   /* margin-bottom: 2rem; */
+ }
+ 
+ .mobileregister input{
+   width: 70%;
+   margin: auto;
+   margin-top: 1.5rem;
+   padding: 10px;
+  
+ }
+
+ .p{
+  /* background-color: gainsboro; */
+  /* padding: 1px; */
+  text-align: left;
+  margin-left: 12%;
+  font-size: 20px;
+ }
+
+ 
+.btnx{
+  background-color: #e42529;
+  color: white;
+  border: 0px;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 10px 0px;
+  width: 80%;
+ 
+}
+.btnx:hover{
+  background-color: #003380;
+}
+
+@media all and (min-width:320px) and (max-width:480px){
+  .mobileregister{
+    display: block;
+    width: 70%;
+    margin: auto;
+   
+   }
+   .mobileregister .parent1{
+    width: 100%;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin:2rem 0;
+    height: 15rem;
+  
+  }
+}
+
+@media all and (min-width:481px) and (max-width:780px){
+  .mobileregister{
+    display:block;
+    width: 80%;
+    margin: auto;
+  
+   }
+   .mobileregister .parent1{
+    width: 100%;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin:2rem 0;
+    height: 15rem;
+  
+  }
+
+  
+}
+@media all and (min-width:781px) and (max-width:1000px){
+  .mobileregister{
+    display:block;
+    width: 70%;
+   margin: auto;
+
+   }
+   .mobileregister .parent1{
+    width: 100%;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin:2rem 0;
+    height: 18rem;
+  
+  }
+}
+
+@media all and (min-width:100px) and (max-width:319px){
+  .mobileregister{
+    display:block;
+    width: 70%;
+   margin: auto;
+
+   }
+   .mobileregister .parent1{
+    width: 100%;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin:2rem 0;
+    height: 18rem;
+  
+  }
+}
+

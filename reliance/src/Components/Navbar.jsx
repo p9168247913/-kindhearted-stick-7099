@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import '../assets/styles/style.css'
 import {FaUserAlt, FaShoppingCart} from 'react-icons/fa'
 import Container from 'react-bootstrap/Container';
@@ -11,11 +12,19 @@ import Offcanvas from 'react-bootstrap/Offcanvas';
 import Misccartlogo from '../assets/Artboard_14.png';
 import ListGroup from 'react-bootstrap/ListGroup';
 import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 const NavbarHeader = () => {
   const alertClicked = () => {
     alert('You clicked the it !!');
   };
+  const Watches = useSelector((store)=>store.allwatch);
+  console.log(Watches)
+  const [text, setText]  = useState('');
+
+  const onSearch = (searchItem)=>{
+      setText(searchItem);
+  }
   return (
     <>
       {['lg'].map((expand) => (
@@ -30,10 +39,23 @@ const NavbarHeader = () => {
                 <Form className="d-flex search-bar1">
                   <Form.Control
                     type="search"
+                    onChange={(e)=>setText(e.target.value)}
                     placeholder="Find your favorite products"
                     className="me-2"
                     aria-label="Search"
                   />
+                  {/* <button onClick={()=>onSearch(text)}>op</button> */}
+                  <div className='search-res'>
+                      {Watches.filter((e=> { 
+                        const searchItem = text.toLowerCase();
+                        const fullname = e.name.toLowerCase();
+                        return searchItem && fullname.startsWith(searchItem) && fullname!==searchItem ; 
+                      })).slice(0,10).map((ele)=> { 
+                        return <div key={ele.id} className='res-box'>
+                              {ele.name}
+                        </div>
+                      })}
+                  </div>
                 </Form>
 
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
@@ -50,6 +72,7 @@ const NavbarHeader = () => {
                 <Form className="search-bar2">
                   <Form.Control
                     type="search"
+                    onChange={(e)=>{setText(e.target.value)}}
                     placeholder="Find your favorite products"
                     className="me-2"
                     aria-label="Search"
