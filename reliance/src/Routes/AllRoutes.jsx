@@ -1,6 +1,6 @@
 import React from 'react'
 import {Routes, Route} from 'react-router-dom'
-import Dashboard from '../Components/Admin/Admin/Dashboard'
+// import Dashboard from '../Components/Admin/Admin/Dashboard'
 // import AdminDashboard from '../Components/Admin/AdminDashboard'
 import AdminLogin from '../Components/Admin/AdminLogin'
 import Home from '../Components/Home'
@@ -10,6 +10,7 @@ import Admin from  "../Pages/Admin/Admin"
 // import Signup from '../Components/Signup'
 import UserRegister from '../Pages/UserSignup/UserRegister';
 import Products from '../Components/Admin/Admin/Products'
+import UserLogin from '../Components/User/UserLogin'
 
 // import Dashboard from "../Components/Admin/Admin/Dashboard";
 // import SidebarWithHeader from '../Pages/Admin/Admin'
@@ -21,11 +22,11 @@ const AllRoutes = () => {
     <div>
         <Routes>
             <Route path='/' element={<Home/>}/>
-            <Route path='/login' element={<Login/>}/>
+            <Route path='/login' element={<UserLogin/>}/>
             {/* <Route path='/signup' element={<Signup/>}/> */}
             <Route path='/register' element={<UserRegister/>}/>
             <Route path="/admin-Login" element={<AdminLogin/>}></Route>
-            <Route path="/admin-Dashboard" element={<Admin><Dashboard/></Admin>}></Route>
+            {/* <Route path="/admin-Dashboard" element={<Admin><Dashboard/></Admin>}></Route> */}
             <Route path="/admin-Products" element = {<Admin><Products/></Admin>}/>
           
             

@@ -12,7 +12,7 @@ import { FetchLaptop } from '../../../Redux/AppReducer/action';
 const ProductCard = () => {
     const dispatch = useDispatch()
     const [searchParams]=useSearchParams()
-    const laptop= useSelector((store)=>store.laptop)
+    const laptop= useSelector((store)=>store.AppReducer.laptop)
     const location = useLocation()
 
     useEffect(()=>{
@@ -43,7 +43,7 @@ if(laptop.length>0){
     
     <Box
       h={"auto"}
-      w="72rem"
+      w="70rem"
       m="auto"
      mt="0px"
       mr="0px"

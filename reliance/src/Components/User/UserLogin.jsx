@@ -3,19 +3,19 @@ import Footer from '../Footer'
 import "./UserLogin.css"
 import NavbarHeader from '../Navbar'
 
-// import { useDispatch} from "react-redux"; 
-// import { useLocation, useNavigate } from "react-router-dom";
-// import { login } from '../../Redux/LoginReducer/action';
+import { useDispatch} from "react-redux"; 
+import { useLocation, useNavigate } from "react-router-dom";
+import { login } from '../../Redux/LoginReducer/action';
 
 
 
 const UserLogin = () => {
   const [email, setEmail]= useState("");
     const [password , setPassword]= useState("")
-    // const dispatch=useDispatch() 
-    // const navigate=useNavigate()
-    // const location=useLocation()
-    // const commingFrom=location.state?.from?.pathname || "/"
+    const dispatch=useDispatch() 
+    const navigate=useNavigate()
+    const location=useLocation()
+    const commingFrom=location.state?.from?.pathname || "/"
 
 
 
@@ -23,19 +23,19 @@ const UserLogin = () => {
 
     const handelSubmit=(e)=>{
         e.preventDefault()
-        // if(email && password){
-        //   let obj={
-        //     email , password
-        //   }
-        //   console.log({email,password})
-          // dispatch(login(obj))
-        //   .then((r)=>{
-        //     navigate(commingFrom , {replace: true})
-        //     navigate("/")
-        // }
-        // )
-        // }
-        // console.log(email,password)
+        if(email && password){
+          let obj={
+            email , password
+          }
+          console.log({email,password})
+          dispatch(login(obj))
+          .then((r)=>{
+            navigate(commingFrom , {replace: true})
+            navigate("/")
+        }
+        )
+        }
+        console.log(email,password)
        
       }
   return (

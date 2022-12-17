@@ -11,7 +11,7 @@ import { FetchSoundBar } from '../../../Redux/AppReducer/action';
 const ProductCard = () => {
     const dispatch = useDispatch()
     const [searchParams]=useSearchParams()
-    const soundbar= useSelector((store)=>store.soundbar)
+    const soundbar= useSelector((store)=>store.AppReducer.soundbar)
     const location = useLocation()
 
     useEffect(()=>{
@@ -42,7 +42,7 @@ if(soundbar.length>0){
     
     <Box
       h={"auto"}
-      w="72rem"
+      w="70rem"
       m="auto"
      mt="0px"
       mr="0px"
@@ -53,7 +53,7 @@ if(soundbar.length>0){
     
       <Box>
       <Flex 
-      // border={"1px solid blue"}
+     
       //  display="grid" 
       boxShadow='lg' p='5' rounded='md' bg='#FFFFFF'
       width={"72rem"}
@@ -62,7 +62,7 @@ if(soundbar.length>0){
       justifyContent="end"
     
       >
-        <Flex border={"0px solid red"} >
+        <Flex border={"1px solid red"} >
         <Box mr={"14px"} fontWeight="bold"><Text>Sort By:</Text></Box>
         <Flex flexDirection={"row"} mr="20px">
           <Box fontSize={"14px"} mr="12px" p="0px 8px" minH="18px" bg="lightgrey" borderRadius={"4px"}><Text pt="2px">Price(Low-High)</Text></Box>

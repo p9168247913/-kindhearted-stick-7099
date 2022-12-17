@@ -7,7 +7,7 @@ import Image from 'react-bootstrap/Image'
 
 const SoundBarCarousel = (props) => {
     const dispatch = useDispatch();
-    const Sound = useSelector((store)=>store.soundbar);
+    const Sound = useSelector((store)=>store.AppReducer.soundbar);
 
     useEffect(()=>{
         dispatch(FetchSoundBar);

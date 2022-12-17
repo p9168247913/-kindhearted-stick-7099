@@ -7,7 +7,7 @@ import Image from 'react-bootstrap/Image'
 
 const WatchCarousel = (props) => {
     const dispatch = useDispatch();
-    const Watches = useSelector((store)=>store.allwatch);
+    const Watches = useSelector((store)=>store.AppReducer.allwatch);
 
     useEffect(()=>{
         dispatch(FetchWatch);

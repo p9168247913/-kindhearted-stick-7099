@@ -26,8 +26,9 @@ const Soundbar = () => {
 
      
      <Container
+       
         mt="20px"
-        minW={"100%"}
+        minW={"98%"}
         height="auto"
         bg="#F9F9FA"
         // border="1px solid red"
