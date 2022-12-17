@@ -55,6 +55,7 @@ const WatchCarousel = (props) => {
         >
             {Watches.map((e)=> {
                 return <div key={e.id} className='card-width'>
+                  
                     <Image src={e.img1} width='100%'/>
                     <p className='product-name'>{e.name}</p>
                     {/* <h3>{e.brand}</h3> */}
@@ -62,6 +63,7 @@ const WatchCarousel = (props) => {
                     <p className='card-details'>M.R.P. {e.MRPx}</p>
                     <p className='card-details'>You Save. {e.discountx} (₹{e.MRP - e.dealprice})</p>
                     <label className='offer-label'>Offer Avaialble</label>
+                  
                 </div>
             })}
         </Carousel>

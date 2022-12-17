@@ -373,6 +373,87 @@
     font-weight: 400 !important;
 }
 
+.shop-area{
+    width: 100%;
+    display: flex;
+    /* align-items: center; */
+    margin: auto;
+}
+.Filters{
+    display: block;
+    width: 20%;
+    margin: 5% auto;
+    margin-bottom: 12%;
+}
+.prod-grid{
+    width: 80%;
+    border-color:1px solid #e42529;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(15,auto);
+    gap: 1%;
+    /* margin: auto; */
+    margin: 5% auto;
+    margin-bottom: 12%;
+}
+.shop-card{
+    text-align: left;
+    width: 100%;
+    margin: auto;
+    box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+    border-radius: 5px;
+    padding: 6%;
+}
+.shop-card > img{
+    width: 80%;
+    margin: auto;
+    margin-bottom: 6%;
+    transition: 0.4s;
+}
+
+.shop-card > img:hover{
+    cursor: pointer;
+    transform: scale(1.08);
+    transition: 0.4s;
+}
+
+.shop-card:hover{
+    cursor: pointer;
+}
+
+.shop-card > div{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2%;
+}
+.card-buttons{
+    background-color: #003380;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    font-size: 15px;
+    padding: 5px 25px 5px 25px;
+    transition: 0.4s;
+    margin-top: 4%;
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+}
+.card-buttons:hover{
+    background-color: white;
+    color: #003380;
+    transition: 0.4s;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+}
+
+.card-button-ico{
+    font-size: 30px;
+    padding-right: 10px;
+}
+.filter-category{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
 @media (min-width: 992px) {
     .navbar-expand-lg .offcanvas {
         flex-grow: 0;
@@ -469,6 +550,20 @@
     .banners-sec>img{
         margin-bottom: 2%;
     }
+    .Filters{
+        display: none;
+    }
+    .prod-grid{
+        width: 100%;
+        border-color:1px solid #e42529;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: repeat(30,auto);
+        gap: 1%;
+        /* margin: auto; */
+        margin: 5% auto;
+        margin-bottom: 12%;
+    }
 }
 
 @media only screen and (min-width:481px) and (max-width:890px) {
@@ -524,5 +619,8 @@
         margin-top: 3%;
         margin-bottom: 6%;
     }
-
+    .Filters{
+        display: none;
+    }
+    
 }
