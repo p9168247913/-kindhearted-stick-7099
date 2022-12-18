@@ -88,7 +88,7 @@ const ProdReq = () => {
   const FetchTelevision =(dispatch)=>{
       dispatch(ProdReq());
       return axios
-      .get('https://reliance-3bcw.onrender.com/television').then((res)=>{ 
+      .get('https://reliance-3bcw.onrender.com/telivision').then((res)=>{ 
           // console.log(res.data)
           dispatch(ProdSuc(res.data))
       }).catch(e=>{
@@ -97,9 +97,9 @@ const ProdReq = () => {
       })
   }
 
-  const FetchWatch = (params)=>(dispatch)=>{
-      dispatch(WatchReq());
-      return axios.get(`https://reliance-3bcw.onrender.com/watch`,params).then(res=>{
+  const FetchWatch =(dispatch)=>{
+      dispatch(WatchReq);
+      return axios.get(`https://reliance-3bcw.onrender.com/watch`).then(res=>{
           dispatch(WatchSuc(res.data))
       }).catch(e=>{
           dispatch(WatchError)

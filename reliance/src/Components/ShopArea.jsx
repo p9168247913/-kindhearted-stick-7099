@@ -15,38 +15,44 @@ const ShopArea = () => {
   const [searchParams,setSearchParams] = useSearchParams();
   const initialCategory=searchParams.getAll('category');
   const [category,setCategory]=useState(initialCategory||[]);
-  
+
+  // const [searchParams] = useSearchParams()
+
   const location=useLocation();
 
   const handleClick=(e)=>{
     const option=e.target.value;
     let newCategory=[...category];
-    if(category.includes(option)){
+    if(newCategory.includes(option)){
       newCategory.splice(newCategory.indexOf(option),1);
     }else{
       newCategory.push(option)
     }
     setCategory(newCategory)
   }
-  useEffect(()=>{
-    dispatch(FetchWatch);
-  },[dispatch])
 
   useEffect(()=>{
-      if(category){
-        let params={}
-        category&&(params.category=category)
-        setSearchParams(params)
-      }
+    dispatch(FetchWatch);
+  },[])
+
+  useEffect(()=>{
+    let params={}
+    params.category=category
+    setSearchParams(params)
+      // if(category){
+      //   category&&(params.category=category)
+      // setSearchParams(params)
+      // }
   },[category, setSearchParams]);
 
   useEffect(()=>{
-    if(Watches.length===0 || location.search){
+    if(Watches.length === 0 || location){
       const getParams={
         params:{
           category:searchParams.getAll("category"),
         }
       }
+      console.log(getParams)
       dispatch(FetchWatch(getParams));
     }
   },[location.search]);
