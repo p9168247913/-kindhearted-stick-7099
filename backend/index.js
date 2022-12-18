@@ -50,7 +50,7 @@ app.get("/laptop", async (req, res) => {
   }
 });
 
-app.get("/telivison", async (req, res) => {
+app.get("/telivision", async (req, res) => {
   try {
     let telivision = await telivisionModel.find({});
     res.status(200).send(telivision);
