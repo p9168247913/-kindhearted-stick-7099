@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import '../assets/styles/style.css'
-import {FaUserAlt, FaShoppingCart} from 'react-icons/fa'
+import {FaUserAlt, FaShoppingCart} from 'react-icons/fa';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -117,12 +117,16 @@ const NavbarHeader = () => {
                   </Nav.Link>
                   <Nav.Link href="#action1">
                     <div className='nav-icons'>
-                        <FaShoppingCart className='cart-ico'/> Cart
+                      <Link to='/login'>
+                          <FaShoppingCart className='cart-ico'/> Cart
+                      </Link>
                     </div>
                   </Nav.Link>
                   <Nav.Link href="#action1">
                     <div className='nav-icons'>
+                    <Link to='/login'>
                         <FaUserAlt className='user-ico'/> Login
+                    </Link>
                     </div>
                   </Nav.Link>
                 </Nav>
@@ -146,7 +150,13 @@ const NavbarHeader = () => {
         </Col>
         <Col>
           <NavDropdown title="TELEVISIONS" id="nav-dropdown" className='drop-menu-text'>
-            <NavDropdown.Item eventKey="4.1">Smart TVs</NavDropdown.Item>
+            
+                <NavDropdown.Item eventKey="4.1">
+                <Link to='/shop'>
+                  Smart TVs
+                </Link>
+                </NavDropdown.Item>
+            
             <NavDropdown.Item eventKey="4.2">32 Inch TVs</NavDropdown.Item>
             <NavDropdown.Item eventKey="4.3">43 Inch TVs</NavDropdown.Item>
             <NavDropdown.Item eventKey="4.1">55 Inch TVs</NavDropdown.Item>

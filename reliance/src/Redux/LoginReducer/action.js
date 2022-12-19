@@ -1,21 +1,23 @@
 import axios from "axios"
 import * as types from "./actionTypes"
 
-const register=(payload)=>(dispatch)=>{
-    dispatch({type:types.SIGNUP_REQUEST})
+
+const login=(payload)=>(dispatch)=>{
+    dispatch({type:types.LOGIN_REQUEST})
     return axios({
         method:"POST",
-        url:"/signup",
+        url:"/login",
         baseURL:"https://reliance-3bcw.onrender.com",
         data:payload
+
     })
     
     .then((r)=>{
-        dispatch({type:types.SIGNUP_SUCCESS,payload:r.data})
+        dispatch({payload:r.data,type:types.LOGIN_SUCCESS})
         console.log(r.data)
     })
-    .catch((e)=>({type:types.SIGNUP_FAILURE,payload:e}))
+    .catch((e)=>({type:types.LOGIN_FAILURE,payload:e}))
 
 }
 
-export {register}
+export {login}
