@@ -1,7 +1,7 @@
-import { Box ,Checkbox,Text,CheckboxGroup,Grid} from '@chakra-ui/react'
+import { Box ,Checkbox,Text,CheckboxGroup,Grid, Radio, Stack ,Flex} from '@chakra-ui/react'
 import React, { useEffect, useState } from "react";
-import { useSelector } from 'react-redux';
 import { useSearchParams } from "react-router-dom";
+import { FaSistrix } from 'react-icons/fa';
 
 
 const Filter = () => {
@@ -33,105 +33,128 @@ const Filter = () => {
 
   return (
     <div>
+     
 
     <Grid justifyContent={"left"}  gap="6" >
-        <Box border={"1px solid blue"}
+    <Box 
+    // border={"1px solid blue"}
        display="grid" 
       boxShadow='lg' p='6' rounded='md' bg='#FFFFFF'
       width={"20rem"}
-      height="2rem" 
+      minHeight="4rem" 
       
       >
         <Text >FILTERS</Text>
         </Box>
 
-        {/* <Box border={"1px solid blue"}
+        
+       <Box 
+      //  border={"1px solid blue"}
          boxShadow='lg' p='6' rounded='md' bg='#FFFFFF'
          width={"20rem"}
          height="auto" >
-          <Text>Category</Text>
-         <CheckboxGroup colorScheme='green' >
-  <Grid  direction={['row', 'row']} >
-    <Checkbox value='soundbar'>Soundbar</Checkbox>
-    <Checkbox value='watch'>Watch</Checkbox>
-    <Checkbox value='appliance'>Appliance</Checkbox>
-    <Checkbox value='television'>Television</Checkbox>
-    <Checkbox value='laptop'>Laptop</Checkbox>
-  </Grid>
-</CheckboxGroup>
-          
-            
-        </Box> */}
-
-        <Box border={"1px solid blue"}
-         boxShadow='lg' p='6' rounded='md' bg='#FFFFFF'
-         width={"20rem"}
-         height="auto" >
-          <Text>Brands</Text>
+          <Text  textAlign={"left"} mb="20px" >Availability</Text>
          <CheckboxGroup colorScheme='green' >
             <Grid  direction={['row', 'row']} >
-              <Checkbox value='Samsung'
+              <Checkbox 
+              >
+                <Text> Exclude out of Stock </Text>
+               
+                </Checkbox>
+
+            </Grid>
+          </CheckboxGroup>
+                    
+        </Box> 
+
+
+        <Box 
+        // border={"1px solid blue"}
+         boxShadow='lg' p='6' rounded='md' bg='#FFFFFF'
+         width={"20rem"}
+         height="auto" >
+          <Flex justifyContent={"space-between"}>
+          <Text  textAlign={"left"} mb="20px"> Brands </Text>
+          <FaSistrix size={"20px"} />
+          </Flex>
+        
+         <CheckboxGroup colorScheme='green' >
+            <Grid  direction={['row', 'row']} >
+              <Checkbox value='LG'
                onChange={handleBrandOnChange}
-                checked={brand.includes("Samsung")}
+               checked={brand.includes("LG")}
+              >
+                <Text> LG </Text>
+               
+                </Checkbox>
+
+                <Checkbox value='Infinity'
+               onChange={handleBrandOnChange}
+               checked={brand.includes("Infinity")}
+              >
+                <Text> Infinity </Text>
+               
+                </Checkbox>
+
+                <Checkbox value='FSony'
+               onChange={handleBrandOnChange}
+               checked={brand.includes("FSony")}
+              >
+                <Text> FSony </Text>
+               
+                </Checkbox>
+
+                <Checkbox value='Samsung'
+               onChange={handleBrandOnChange}
+               checked={brand.includes("Samsung")}
               >
                 <Text> Samsung </Text>
                
                 </Checkbox>
 
-                <Checkbox value='Oneplus'
+
+                <Checkbox value='MODGET'
                onChange={handleBrandOnChange}
-               checked={brand.includes("Oneplus")}
+               checked={brand.includes("MODGET")}
               >
-                <Text> Oneplus </Text>
+                <Text> MODGET</Text>
                
                 </Checkbox>
 
-                <Checkbox value='TCL'
+                <Checkbox value='JBL'
                onChange={handleBrandOnChange}
-               checked={brand.includes("TCL")}
+               checked={brand.includes("JBL")}
               >
-                <Text> TCL </Text>
+                <Text> JBL</Text>
                
                 </Checkbox>
 
-                <Checkbox value='Kodak'
-               onChange={handleBrandOnChange}
-               checked={brand.includes("Kodak")}
-              >
-                <Text> Kodak </Text>
-               
-                </Checkbox>
-
-
-                <Checkbox value='Toshiba'
-               onChange={handleBrandOnChange}
-               checked={brand.includes("Toshiba")}
-              >
-                <Text> Toshiba</Text>
-               
-                </Checkbox>
-
-                <Checkbox value='Realme'
-               onChange={handleBrandOnChange}
-               checked={brand.includes("Realme")}
-              >
-                <Text> Realme</Text>
-               
-                </Checkbox>
-
-                <Checkbox value='Karbonn'
-               onChange={handleBrandOnChange}
-               checked={brand.includes("Karbonn")}
-              >
-                <Text> Karbonn</Text>
-               
-                </Checkbox>
+             
            
               
             </Grid>
           </CheckboxGroup>
                     
         </Box> 
+
+
+        <Box 
+        // border={"1px solid blue"}
+         boxShadow='lg' p='6' rounded='md' bg='#FFFFFF'
+         width={"20rem"}
+         height="auto" >
+          <Text textAlign={"left"} mb="20px" >SORTING</Text>
+        
+          <Stack>
+          <Radio size='lg' name='1' colorScheme='green'>
+           A-Z 
+          </Radio>
+          <Radio size='lg' name='1' colorScheme='green' >
+            Z-A
+          </Radio>
+        </Stack>   
+        </Box> 
+
 
        
 

@@ -7,7 +7,7 @@ import Image from 'react-bootstrap/Image'
 
 const ProductCarousel = (props) => {
     const dispatch = useDispatch();
-    const televisons = useSelector((store)=>store.prod_name);
+    const televisons = useSelector((store)=>store.AppReducer.prod_name);
 
     useEffect(()=>{
         dispatch(FetchTelevision)

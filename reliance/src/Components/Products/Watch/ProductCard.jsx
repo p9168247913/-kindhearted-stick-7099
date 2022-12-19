@@ -1,70 +1,100 @@
-import { Box , Container,Text,Image ,Flex,Grid,Heading,Button,GridItem} from '@chakra-ui/react'
+import { Box ,Text,Image ,Flex,Grid,Heading,Button,GridItem, Select, Stack, Center} from '@chakra-ui/react'
 import React,{useEffect} from 'react'
-import { useDispatch, useSelector ,shallowEqual} from 'react-redux';
+import { BsFillGridFill } from 'react-icons/bs';
+import { FiMenu } from 'react-icons/fi';
+import { useDispatch, useSelector} from 'react-redux';
 import { useLocation,  useSearchParams } from 'react-router-dom';
-import { FetchTelevision } from '../../Redux/AppReducer/action';
+import { FetchWatch } from '../../../Redux/AppReducer/action';
+
+
 
 
 const ProductCard = () => {
     const dispatch = useDispatch()
     const [searchParams]=useSearchParams()
-    const prod_name= useSelector((store)=>store.prod_name)
+    const allwatch= useSelector((store)=>store.AppReducer.allwatch)
     const location = useLocation()
 
-   
-
-    
     useEffect(()=>{
-        if( location || prod_name.length === 0){
+      const brand = searchParams.getAll("brand")
+        if( location || allwatch.length === 0){
          
-            const brand = searchParams.getAll("brand")
+           
             const queryParams = {
                 params:{
                     brand
                 }
             }
-            console.log(queryParams)
+            console.log("ans" ,queryParams)
 
-            dispatch(FetchTelevision(queryParams))
+            dispatch(FetchWatch(queryParams))
         }
         
-    },[location.search])
+    },[location.search, dispatch, searchParams])
 
 
    
-
+if(allwatch.length>0){
+  console.log(allwatch)
+}
  
   return (
     <>
+    
     <Box
       h={"auto"}
-      w="70%"
+      w="70rem"
       m="auto"
      mt="0px"
       mr="0px"
       
-      border={"1px solid red"}
+      // border={"3px solid green"}
     >
-      
-      <Text fontSize={"19px"} color="blackAlpha.700" fontWeight={"700"} border="1px solid blue">
-        Showing Products({prod_name.length}) 
-      </Text>
+   
+    
       <Box>
+      <Flex 
+      // border={"1px solid blue"}
+      //  display="grid" 
+      boxShadow='lg' p='5' rounded='md' bg='#FFFFFF'
+      width={"72rem"}
+     minHeight="2rem"
+      position={"relative"}
+      justifyContent="end"
+    
+      >
+        <Flex border={"0px solid red"} >
+        <Box mr={"14px"} fontWeight="bold"><Text>Sort By:</Text></Box>
+        <Flex flexDirection={"row"} mr="20px">
+          <Box fontSize={"14px"} mr="12px" p="0px 8px" minH="18px" bg="lightgrey" borderRadius={"4px"}><Text pt="2px">Price(Low-High)</Text></Box>
+          <Box fontSize={"14px"} p="0px 8px" bg="lightgrey" borderRadius={"4px"}><Text pt="2px">Price(High-Low)</Text></Box>
+        </Flex>
+
+        <Box height="35px" border={"1px solid lightgrey"} w="40px" pt={"2"} >
+          <Center><FiMenu size={"20px"} color="grey"/></Center>
+        </Box>
+        <Box height="35px" border={"1px solid lightgrey"} w="40px" pt={"2"} >
+          <Center> <BsFillGridFill size={"18px"} /> </Center>
+        </Box>
+
+        </Flex>
+         </Flex>
         <Grid
           templateColumns={["repeat(1, 1fr)", "repeat(2,1fr)", "repeat(3,1fr)"]}
           gap={6}
           boxSizing="borderBox"
-          py={"15px"}
+         mb={"10"}
+         py={"18px"}
         >
-       
-       {prod_name.length > 0 && prod_name.map((item)=>{
+          
+            {allwatch.length > 0 && allwatch.map((item)=>{
                 return <GridItem 
-              key={item.id}
+                key={item.id}
                alignContent="center">
                 <Box
                   className="companiesBoxContainer"
                   border={"1px solid lightgrey"}
-                  h="390px"
+                  h="410px"
                   display={"flex"}
                   flexDirection="column"
                   alignItems={"center"}
@@ -87,7 +117,7 @@ const ProductCard = () => {
                     mb="15px"
                     color={"blackAlpha.800"}
                   >
-                    Hammer Pulse 3.0 Bluetooth Calling Smartwatch with Honeycomb Design (Black)
+                    {item.name}
                   </Heading>
                  
                   <Text
@@ -110,13 +140,10 @@ const ProductCard = () => {
                    {item.dealprice}
                   </Text>
                     
-                  
-                 
-
                   <Box bottom="1" position={"absolute"}>
                     <Button bg="blue.50" color="blue.600" borderRadius={"15px"}>
                       View Products
-                    </Button>
+                  </Button>
                   </Box>
                 </Box>
               </GridItem>
