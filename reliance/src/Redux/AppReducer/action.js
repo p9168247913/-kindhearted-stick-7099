@@ -97,7 +97,7 @@ const ProdReq = () => {
       })
   }
 
-  const FetchWatch =(dispatch)=>{
+  const FetchWatch = ()=>(dispatch)=>{
       dispatch(WatchReq);
       return axios.get(`https://reliance-3bcw.onrender.com/watch`).then(res=>{
           dispatch(WatchSuc(res.data))

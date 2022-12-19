@@ -33,7 +33,7 @@ const ShopArea = () => {
 
   useEffect(()=>{
     dispatch(FetchWatch);
-  },[])
+  },[dispatch])
 
   useEffect(()=>{
     let params={}
