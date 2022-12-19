@@ -1,0 +1,76 @@
+.form .input-box {
+  width: 100%;
+  margin-top: 5px;
+}
+.input-box label {
+  color: #333;
+}
+.form :where(.input-box input, .select-box) {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  outline: none;
+  font-size: 1.1rem;
+  color: #807f7f;
+  margin-top: 5px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 0 15px;
+}
+.input-box input:focus {
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+.form .column {
+  display: flex;
+  column-gap: 10px;
+}
+
+.select-box select {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: none;
+  color: #7e7b7b;
+  font-size: 1rem;
+}
+.form button {
+  height: 30px;
+  width: 70%;
+  display: block;
+  margin: auto;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 30px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: rgb(0, 0, 0);
+}
+.form button:hover {
+  background: red;
+  color: black;
+}
+/*Responsive*/
+@media screen and (max-width: 500px) {
+  .form .column {
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 0;
+  }
+  .form {
+    width: 100%;
+  }
+  
+  /* .form :where(.gender-option, .gender) {
+    row-gap: 15px;
+  } */
+}
+
+@media screen and (max-width: 390px){
+  .form {
+    width: 100%;
+    padding: 0px;
+  }
+}

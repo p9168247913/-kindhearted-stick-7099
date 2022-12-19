@@ -28,9 +28,9 @@ export default function AdminLogin() {
     }
     const navigate = useNavigate()
     const handelSubmit = ()=>{
-        if(text.email === "reliance@gmail.com" && text.password === "ambani"){
+        if(text.email === "reliance@gmail.com" && text.password === "12345"){
             //send dashboard
-            navigate("/admin-Dashboard")
+            navigate("/home")
         }else if(text.email === "reliance@gmail.com" && text.password !== "ambani"){
             //password wrong
         }else if(text.email !== "reliance@gmail.com" && text.password === "ambani"){

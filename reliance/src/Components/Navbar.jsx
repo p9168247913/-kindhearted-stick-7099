@@ -13,6 +13,7 @@ import Misccartlogo from '../assets/Artboard_14.png';
 import ListGroup from 'react-bootstrap/ListGroup';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import {AdminLogin} from "../AdminLogin/AdminLogin"
 
 const NavbarHeader = () => {
   const alertClicked = () => {
@@ -123,6 +124,11 @@ const NavbarHeader = () => {
                   <Nav.Link href="#action1">
                     <div className='nav-icons'>
                         <FaUserAlt className='user-ico'/> Login
+                    </div>
+                  </Nav.Link>
+                  <Nav.Link href="/admin-Login">
+                    <div className='nav-icons'>
+                        <FaUserAlt className='user-ico'/> Admin Login
                     </div>
                   </Nav.Link>
                 </Nav>
