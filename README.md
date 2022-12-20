@@ -326,27 +326,15 @@ From there you can:
 - Start a local copy of the docs site with `yarn start`
 - Or build a local copy of the library with `yarn run build`
 
+<br>
 
-<p align="center">
+<p align="">
   <a href="https://github.com/chakra-ui/chakra-ui">
     <img src="https://raw.githubusercontent.com/chakra-ui/chakra-ui/main/media/logo-colored@2x.png?raw=true" alt="Chakra logo" width="300" />
   </a>
 </p>
 
-<h1 align="center">Build Accessible React Apps with Speed ⚡️</h1>
 <br>
-
-<p align="center">
-  <img alt="Bundle Size" src="https://badgen.net/bundlephobia/minzip/@chakra-ui/react"/>
-  <img alt="Language grade: JavaScript" src="https://img.shields.io/lgtm/grade/javascript/g/chakra-ui/chakra-ui.svg?logo=lgtm&logoWidth=18"/>
-  <img alt="MIT License" src="https://img.shields.io/github/license/chakra-ui/chakra-ui"/>
-  <img alt="NPM Downloads" src="https://img.shields.io/npm/dm/@chakra-ui/react.svg?style=flat"/>
-  <img alt="Github Stars" src="https://badgen.net/github/stars/chakra-ui/chakra-ui" />
-  <a href="https://discord.gg/chakra-ui">
-    <img alt="Discord" src="https://img.shields.io/discord/660863154703695893.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2" />
-  </a>
-</p>
-
 <br />
 
 Chakra UI provides a set of accessible, reusable, and composable React
