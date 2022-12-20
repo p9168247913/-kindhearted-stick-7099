@@ -237,7 +237,6 @@ function Question() {
 }
 ```
 
-Ending up with a large JS bundle? Check out [this issue](https://github.com/react-icons/react-icons/issues/154).
 
 ### Adjustment CSS
 
@@ -303,9 +302,53 @@ The demo is a [Create React App](https://create-react-app.dev/) boilerplate with
 cd packages/react-icons
 yarn build
 
-cd ../demo
-yarn start
-```
 
-## Why React SVG components instead of fonts?
+# React-Bootstrap
 
+> **[Bootstrap 5][bootstrap]** components built with [React][react].
+
+[![GitHub Actions CI status][gh-actions-badge]][gh-actions]
+[![Travis CI Build status][travis-badge]][travis]
+[![npm][npm-badge]][npm]
+[![Codecov][codecov-badge]][codecov]
+[![Discord][discord-badge]][discord]
+[![Netlify][netlify-badge]][netlify]
+
+## Bootstrap compatibility
+
+React-Bootstrap is compatible with various versions of Bootstrap.  As such, you need to ensure you are using the correct combination of versions.  
+
+See the below table on which version of React-Bootstrap you should be using in your project.
+
+| Bootstrap Version | React-Bootstrap Version | Documentation |
+| ------------- |:-------------:| -----:|
+| v5.x | 2.x | [Link][v5-documentation] |
+| v4.x | 1.x | [Link][v4-documentation] |
+| v3.x | 0.33.x (not maintained) | [Link][v3-documentation] |
+
+## Migrating from previous versions
+
+### Bootstrap 4 to Bootstrap 5
+
+If you would like to update React-Bootstrap within an existing project to use Bootstrap 5, please read our docs for **[migrating to React-Bootstrap V2][v5-migration]**.
+
+### Bootstrap 3 to Bootstrap 4
+
+If you would like to update React-Bootstrap within an existing project to use Bootstrap 4, please read our docs for **[migrating to React-Bootstrap V1][v4-migration]**.
+
+## Related modules
+
+- [react-router-bootstrap][react-router-bootstrap] – Integration with [React Router][react-router]
+- [Awesome React Bootstrap Components][awesome-react-bootstrap-components] - Additional components like off-canvas navbar, switch and sliders.
+
+## Local setup
+
+Yarn is our package manager of choice here. Check out setup
+instructions [here](https://yarnpkg.com/en/docs/install) if you don't have it installed already.
+After that you can run `yarn run bootstrap` to install all the needed dependencies.
+
+From there you can:
+
+- Run the tests once with `yarn test` (Or run them in watch mode with `yarn run tdd`).
+- Start a local copy of the docs site with `yarn start`
+- Or build a local copy of the library with `yarn run build`
