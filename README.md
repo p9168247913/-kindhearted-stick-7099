@@ -267,21 +267,12 @@ CSS
 
 ### TypeScript native support
 
-Dependencies on `@types/react-icons` can be deleted.
-
-#### Yarn
-
-```bash
-yarn remove @types/react-icons
-```
+Dependencies on `@types/react-icons` can be deleted
 
 #### NPM
 
 ```bash
-npm remove @types/react-icons
-```
-
-## Contributing
+npm remove @types/react-icon/fa
 
 ### Development
 
@@ -318,14 +309,3 @@ yarn start
 
 ## Why React SVG components instead of fonts?
 
-SVG is [supported by all major browsers](http://caniuse.com/#search=svg). With `react-icons`, you can serve only the needed icons instead of one big font file to the users, helping you to recognize which icons are used in your project.
-
-## Related Projects
-
-- [react-svg-morph](https://github.com/gorangajic/react-svg-morph/)
-
-## Licence
-
-MIT
-
-- Icons are taken from the other projects so please check each project licences accordingly.
