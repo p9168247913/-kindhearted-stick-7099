@@ -70,7 +70,8 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
-React Axios example with Rest API
+# React Axios with API
+
 React Client with Axios to make CRUD requests to Rest API in that:
 
 React Axios GET request: get all Tutorials, get Tutorial by Id, find Tutorial by title
