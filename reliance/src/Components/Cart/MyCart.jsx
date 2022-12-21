@@ -1,5 +1,5 @@
 import React from 'react'
-import { Stack, Box, Text, Image, Divider, Grid, GridItem, SimpleGrid } from "@chakra-ui/react"
+import { Stack, Box, Text, Image, Divider, GridItem, SimpleGrid } from "@chakra-ui/react"
 
 const MyCart = () => {
     return (

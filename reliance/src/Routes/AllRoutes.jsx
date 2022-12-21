@@ -12,6 +12,7 @@ import UserRegister from '../Pages/UserSignup/UserRegister';
 import Products from '../Components/Admin/Admin/Products'
 import Cart from "../Pages/CartAndPayment/Cart"
 import Payment from "../Pages/CartAndPayment/Payment"
+import { Television } from './../Pages/SingleProductPages/Television';
 
 const AllRoutes = () => {
   return (
@@ -27,6 +28,7 @@ const AllRoutes = () => {
         <Route path="/admin-Products" element={<Admin><Products /></Admin>} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/payment" element={<Payment />} />
+        {/* <Route path='/tv' element={<  Television />} /> */}
 
       </Routes>
     </div >

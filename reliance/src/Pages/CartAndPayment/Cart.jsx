@@ -19,5 +19,5 @@ const Cart = () => {
         </>
     )
 }
-// style={{ width: "70%" }}
+
 export default Cart
