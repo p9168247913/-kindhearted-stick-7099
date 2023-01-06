@@ -47,22 +47,21 @@ const dispatch=useDispatch()
         <div className="child">
           <form onSubmit={handelSubmit}>
           <label  >Name*</label>
-            <input type="text" className="name"  placeholder='Name' name="name" value={formdata.name} onChange={handelChange} />
-          
-           
-            
+            <input type="text" className="name"  placeholder='Name' name="name" value={formdata.name} onChange={handelChange} 
+            style={{border:"1px solid grey"}}/>
             <label >Email Address*</label>
-            <input type="email" className="email"  placeholder='Email Address'name="email"  value={formdata.email} onChange={handelChange}/>
+            <input type="email" className="email"  placeholder='Email Address'name="email"  value={formdata.email} onChange={handelChange}
+            style={{border:"1px solid grey"}}/>
             <p>Your email address will be used to send order invoice, order updates etc.</p>
-            
             <label  >Mobile Number*</label>
             <input type="number"  className="mobile" min="1000000000" max="9999999999"  placeholder='Mobile Number' name="phonenumber"
-             value={formdata.phonenumber} onChange={handelChange}
+             value={formdata.phonenumber} onChange={handelChange} style={{border:"1px solid grey"}}
             />
             <p>Your mobile number will be used to avail benefits such as #TAG DIGITAL Cashback and #One Loyality Points and receive quick notifications.</p>
            
             <label  >Set Your Password*</label>
-            <input type="password" className="password"  placeholder='Password' name="password"  value={formdata.password} onChange={handelChange}/>
+            <input type="password" className="password"  placeholder='Password' name="password"  value={formdata.password} onChange={handelChange}
+            style={{border:"1px solid grey"}}/>
             
             <input type="submit" className="signup"value="PROCEED" />
             

@@ -49,19 +49,21 @@ const UserLogin = () => {
              <div className="p">
                  <h4>Login / Register</h4>   
              </div>
-            <div>
+            <div >
                <form action="/signup2.html" onSubmit={handelSubmit}>
                <input type="email"  placeholder='Email Address' 
                 value={email}
                 onChange={(e)=>setEmail(e.target.value)}
+                style={{border:"1px solid grey"}}
                />
                    <br/>
                 <input type="password"  placeholder='Password' 
                 value={password}
                 onChange={(e)=>setPassword(e.target.value)}
+                style={{border:"1px solid grey"}}
                 />
                    <br />
-                 <input type="submit" className="btnx" value="PROCEED"/>
+                 <input type="submit" className="btnx" value="PROCEED" />
                </form>
             </div>
       </div>
